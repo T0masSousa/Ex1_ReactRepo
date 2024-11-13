@@ -293,3 +293,10 @@ body {
   opacity: 1;
 }
 
+.btn_atm {
+  color: black;
+  background-color: #e9e8ed;
+  border-radius: 0.8rem;
+  margin: 0.5rem;
+}
+

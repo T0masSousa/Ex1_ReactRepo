@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FaHouse } from "react-icons/fa6";
 import { FaClipboardCheck } from "react-icons/fa";
+import { MdOutlineAtm } from "react-icons/md";
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
@@ -45,6 +46,9 @@ function Navbar() {
         </NavbarItem>
         <NavbarItem className={location.pathname === '/Ex2' ? 'active' : ''}>
           <NavbarLink to="/Ex2"><FaClipboardCheck /> EX2 - Tasks</NavbarLink>
+        </NavbarItem>
+        <NavbarItem className={location.pathname === '/Ex3' ? 'active' : ''}>
+          <NavbarLink to="/Ex3"><MdOutlineAtm /> EX3 - ATM</NavbarLink>
         </NavbarItem>
       </NavbarList>
     </NavbarContainer>
