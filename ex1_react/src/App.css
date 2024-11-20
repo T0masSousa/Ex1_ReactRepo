@@ -68,7 +68,6 @@ body {
   }
 }
 
-
 /*END RESETS*/
 /* GLOBAL STYLES */
 .form-group > input[type="text"] {
@@ -299,4 +298,3 @@ body {
   border-radius: 0.8rem;
   margin: 0.5rem;
 }
-

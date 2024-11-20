@@ -1,10 +1,11 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import { FaHouse } from "react-icons/fa6";
 import { FaClipboardCheck } from "react-icons/fa";
 import { MdOutlineAtm } from "react-icons/md";
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import { FaCat } from "react-icons/fa6";
+import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const NavbarContainer = styled.nav`
   background-color: #333;
@@ -38,17 +39,39 @@ function Navbar() {
   return (
     <NavbarContainer>
       <NavbarList>
-        <NavbarItem className={location.pathname === '/' ? 'active' : ''}>
-          <NavbarLink to="/"><FaHouse /> Home</NavbarLink>
+        <NavbarItem className={location.pathname === "/" ? "active" : ""}>
+          <NavbarLink to="/">
+            <FaHouse /> Home
+          </NavbarLink>
         </NavbarItem>
-        <NavbarItem className={location.pathname === '/Ex1' ? 'active' : ''}>
-          <NavbarLink to="/Ex1"><FaClipboardCheck /> EX1 - Tasks</NavbarLink>
+        <NavbarItem className={location.pathname === "/Ex1" ? "active" : ""}>
+          <NavbarLink to="/Ex1">
+            <FaClipboardCheck />
+            Tasks 1
+          </NavbarLink>
         </NavbarItem>
-        <NavbarItem className={location.pathname === '/Ex2' ? 'active' : ''}>
-          <NavbarLink to="/Ex2"><FaClipboardCheck /> EX2 - Tasks</NavbarLink>
+        <NavbarItem className={location.pathname === "/Ex2" ? "active" : ""}>
+          <NavbarLink to="/Ex2">
+            <FaClipboardCheck />
+            Tasks 2
+          </NavbarLink>
         </NavbarItem>
-        <NavbarItem className={location.pathname === '/Ex3' ? 'active' : ''}>
-          <NavbarLink to="/Ex3"><MdOutlineAtm /> EX3 - ATM</NavbarLink>
+        <NavbarItem className={location.pathname === "/Ex3" ? "active" : ""}>
+          <NavbarLink to="/Ex3">
+            <MdOutlineAtm />
+            ATM
+          </NavbarLink>
+        </NavbarItem>
+        <NavbarItem className={location.pathname === "/Ex4" ? "active" : ""}>
+          <NavbarLink to="/Ex4">
+            <FaCat /> CAT API 1
+          </NavbarLink>
+        </NavbarItem>
+        <NavbarItem className={location.pathname === "/Ex5" ? "active" : ""}>
+          <NavbarLink to="/Ex5">
+            <FaCat />
+            CAT API 2
+          </NavbarLink>
         </NavbarItem>
       </NavbarList>
     </NavbarContainer>
