@@ -9,7 +9,7 @@ function Form() {
   const handleFormSubmit = (event) => {
     event.preventDefault();
     addTask(TaskName);
-    setTaskName(""); // Limpar input
+    setTaskName("");
   };
 
   const handleInputChange = (event) => {

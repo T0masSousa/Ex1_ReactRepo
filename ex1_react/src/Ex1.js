@@ -1,27 +1,28 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
-//Components
+//COMPONENTS
 import Form from "./components/ex1/form";
 import FilterButtons from "./components/ex1/filterbuttons";
 import ListTasksAndState from "./components/ex1/listtasksandstate";
 
 function Ex1() {
-  const [tasks, setTasks] = useState(() =>{
-
-    const savedTasks = localStorage.getItem('tasks');
-     return savedTasks ? JSON.parse(savedTasks) : [
-       { id: "todo-0", name: "Eat", completed: true },
-       { id: "todo-1", name: "Sleep", completed: false },
-       { id: "todo-2", name: "Repeat", completed: false },
-     ];
-   });
+  const [tasks, setTasks] = useState(() => {
+    const savedTasks = localStorage.getItem("tasks");
+    return savedTasks
+      ? JSON.parse(savedTasks)
+      : [
+          { id: "todo-0", name: "Eat", completed: true },
+          { id: "todo-1", name: "Sleep", completed: false },
+          { id: "todo-2", name: "Repeat", completed: false },
+        ];
+  });
 
   const [filter, setFilter] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    localStorage.setItem('tasks', JSON.stringify(tasks));
+    localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
   const addTask = (taskName) => {

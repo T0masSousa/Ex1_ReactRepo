@@ -2,13 +2,14 @@ import React, { useContext } from "react";
 import "./App.css";
 import { TodoContext } from "./ToDoContext";
 
-// Components
+//COMPONENTS
 import Form from "./components/ex2/form";
 import FilterButtons from "./components/ex2/filterbuttons";
 import ListTasksAndState from "./components/ex2/listtasksandstate";
 
 function Ex2() {
-  const { tasks, searchTerm, filter, searchTasks, filterTasks } = useContext(TodoContext);
+  const { tasks, searchTerm, filter, searchTasks, filterTasks } =
+    useContext(TodoContext);
 
   const filteredTasks = filterTasks(tasks, filter);
   const searchedTasks = searchTasks(filteredTasks, searchTerm);
